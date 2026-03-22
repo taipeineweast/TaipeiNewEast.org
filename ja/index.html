@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台北ニューイースト・ロータリークラブ | Rotary Club of Taipei New East</title>
+  <meta name="description" content="台北ニューイースト・ロータリークラブは1987年の創立以来、奉仕を通じて専門家をつなぎ、地域と世界に変化を創り続けています。私たちと一緒に善のために団結しよう。">
+  <meta property="og:title" content="台北ニューイースト・ロータリークラブ">
+  <meta property="og:description" content="奉仕を通じて専門家をつなぎ、地域と世界に変化を創る">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://taipeineweast.org/ja/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'rotary-blue': '#003366',
+            'rotary-azure': '#0050A2',
+            'rotary-sky': '#0097D6',
+            'rotary-royal': '#1A237E',
+            'rotary-gold': '#F7A81B',
+            'rotary-light': '#E8F4FD',
+          },
+          fontFamily: {
+            'heading': ['"Open Sans Condensed"', '"Noto Sans JP"', 'sans-serif'],
+            'body': ['"Open Sans"', '"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="font-body text-gray-800 bg-white">
+
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-rotary-blue/95 backdrop-blur-sm transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-2 text-white">
+          <img src="../assets/images/logo-white-simple.png" alt="台北ニューイースト・ロータリークラブ" class="h-12 md:h-14 w-auto">
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#about" class="nav-link text-white/90 hover:text-white text-sm">私たちについて</a>
+          <a href="#services" class="nav-link text-white/90 hover:text-white text-sm">活動実績</a>
+          <a href="#calendar" class="nav-link text-white/90 hover:text-white text-sm">カレンダー</a>
+          <a href="#join" class="nav-link text-white/90 hover:text-white text-sm">入会案内</a>
+          <a href="#contact" class="nav-link text-white/90 hover:text-white text-sm">お問い合わせ</a>
+          <!-- Language switcher -->
+          <div class="flex items-center gap-1 ml-2">
+            <a href="../zh/" class="lang-btn px-2 py-1 rounded text-xs font-semibold text-white/70 hover:bg-rotary-gold hover:text-rotary-blue">中</a>
+            <a href="../en/" class="lang-btn px-2 py-1 rounded text-xs font-semibold text-white/70 hover:bg-rotary-gold hover:text-rotary-blue">EN</a>
+            <a href="../ja/" class="lang-btn px-2 py-1 rounded text-xs font-semibold bg-rotary-gold text-rotary-blue">日</a>
+          </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="menu-btn" class="md:hidden text-white p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="mobile-menu md:hidden">
+        <div class="pb-4 space-y-2">
+          <a href="#about" class="block text-white/90 hover:text-white py-2 text-sm">私たちについて</a>
+          <a href="#services" class="block text-white/90 hover:text-white py-2 text-sm">活動実績</a>
+          <a href="#calendar" class="block text-white/90 hover:text-white py-2 text-sm">カレンダー</a>
+          <a href="#join" class="block text-white/90 hover:text-white py-2 text-sm">入会案内</a>
+          <a href="#contact" class="block text-white/90 hover:text-white py-2 text-sm">お問い合わせ</a>
+          <div class="flex items-center gap-2 pt-2 border-t border-white/20">
+            <a href="../zh/" class="lang-btn px-3 py-1 rounded text-xs font-semibold text-white/70 border border-white/30">中文</a>
+            <a href="../en/" class="lang-btn px-3 py-1 rounded text-xs font-semibold text-white/70 border border-white/30">English</a>
+            <a href="../ja/" class="lang-btn px-3 py-1 rounded text-xs font-semibold bg-rotary-gold text-rotary-blue">日本語</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background photo -->
+    <div class="absolute inset-0">
+      <img src="../assets/images/1_Hero.jpg" alt="台北ニューイースト・ロータリークラブ" class="w-full h-full object-cover">
+    </div>
+    <!-- Dark overlay for text readability -->
+    <div class="absolute inset-0 hero-overlay"></div>
+
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <!-- Rotary Logo -->
+      <div class="mb-6">
+        <img src="../assets/images/logo-white-simple.png" alt="台北ニューイースト・ロータリークラブ" class="h-28 md:h-36 w-auto mx-auto">
+      </div>
+
+      <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+        奉仕を通じて専門家をつなぎ<br>
+        <span class="text-rotary-gold">地域と世界に変化を創る</span>
+      </h1>
+      <p class="text-white/80 text-lg sm:text-xl mb-4 max-w-2xl mx-auto">
+        台北ニューイースト・ロータリークラブ — 1987年からの奉仕と親睦
+      </p>
+      <p class="text-rotary-gold/90 text-sm sm:text-base mb-8">
+        2025-2026年度テーマ：善のために団結しよう Unite for Good
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#about" class="btn-primary text-base">詳しく見る</a>
+        <a href="#join" class="btn-outline text-base">ロータリーに参加</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-rotary-blue mb-4">ニューイースト・ロータリークラブについて</h2>
+        <div class="section-divider mb-6"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
+          台北ニューイースト・ロータリークラブは1987年に創立され、国際ロータリー第3522地区に所属しています。多様な職業分野の会員が、例会での親睦、地域奉仕、国際奉仕、職業奉仕、青少年奉仕を通じて、教育・社会貢献・国際交流に取り組んでいます。
+        </p>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 reveal">
+        <div class="text-center p-6 rounded-2xl bg-rotary-light/50">
+          <div class="stat-number text-4xl md:text-5xl text-rotary-azure mb-1">1987</div>
+          <div class="text-sm text-gray-500">創立年</div>
+        </div>
+        <div class="text-center p-6 rounded-2xl bg-rotary-light/50">
+          <div class="stat-number text-4xl md:text-5xl text-rotary-azure mb-1">39</div>
+          <div class="text-sm text-gray-500">期</div>
+        </div>
+        <div class="text-center p-6 rounded-2xl bg-rotary-light/50">
+          <div class="stat-number text-4xl md:text-5xl text-rotary-azure mb-1">3522</div>
+          <div class="text-sm text-gray-500">国際ロータリー地区</div>
+        </div>
+        <div class="text-center p-6 rounded-2xl bg-rotary-light/50">
+          <div class="stat-number text-4xl md:text-5xl text-rotary-azure mb-1">35+</div>
+          <div class="text-sm text-gray-500">年の国際協力</div>
+        </div>
+      </div>
+
+      <!-- President & Meeting Info -->
+      <div class="grid md:grid-cols-2 gap-8 reveal">
+        <!-- Current President -->
+        <div class="bg-gradient-to-br from-rotary-blue to-rotary-azure rounded-2xl p-8 text-white">
+          <div class="text-rotary-gold text-sm font-semibold mb-2">2025-2026年度会長</div>
+          <h3 class="text-2xl font-bold mb-1">張国栄 P John (Kuo-Rong) Chang</h3>
+          <p class="text-white/70 text-sm mb-4">第39期会長</p>
+          <div class="flex items-center gap-3 text-sm text-white/80">
+            <span>年度テーマ</span>
+            <span class="bg-rotary-gold/20 text-rotary-gold px-3 py-1 rounded-full text-xs font-semibold">
+              善のために団結しよう Unite for Good
+            </span>
+          </div>
+          <div class="mt-4 pt-4 border-t border-white/20 text-sm text-white/60">
+            <p>国際ロータリー会長：Francesco Arezzo</p>
+            <p>3522地区ガバナー：林政邦 DG Capital</p>
+          </div>
+        </div>
+
+        <!-- Meeting Info -->
+        <div class="bg-gray-50 rounded-2xl p-8">
+          <h3 class="text-xl font-bold text-rotary-blue mb-4">例会のご案内</h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-rotary-sky/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-rotary-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800">毎週金曜日</div>
+                <div class="text-sm text-gray-500">12:30 PM - 2:00 PM</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-rotary-sky/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-rotary-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800">ハワードプラザホテル台北</div>
+                <div class="text-sm text-gray-500">台北市仁愛路三段160号</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-rotary-sky/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-rotary-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800">+886-2-25233039</div>
+                <div class="text-sm text-gray-500">クラブ事務局</div>
+                <div class="font-semibold text-gray-800 mt-1">+886-2-23267412</div>
+                <div class="text-sm text-gray-500">例会場（ハワードプラザホテル台北）</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-rotary-sky/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-rotary-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800">neweast.n3520@msa.hinet.net</div>
+                <div class="text-sm text-gray-500">E-mail</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT IS ROTARY ============ -->
+  <section id="rotary" class="py-20 md:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-rotary-blue mb-4">ロータリーとは？</h2>
+        <div class="section-divider mb-6"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          ロータリーは1905年に創立された世界的な奉仕団体で、あらゆる分野の専門家やリーダーが「奉仕」を理念に集い、親睦と協力を通じて地域社会の改善と世界平和の推進に取り組んでいます。世界中のロータリアンが健康、教育、環境、経済発展などの課題に取り組むサービスプロジェクトを推進し、真の友情を育みながら、職業と生活において高い倫理基準を実践しています。
+        </p>
+      </div>
+
+      <!-- Value Cards -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 reveal">
+        <div class="value-card bg-white rounded-2xl p-6 text-center shadow-sm">
+          <div class="w-16 h-16 bg-rotary-sky/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-rotary-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-rotary-blue mb-2">親睦と専門交流</h3>
+          <p class="text-sm text-gray-500">各分野の専門家と出会い、視野と人脈を広げる</p>
+        </div>
+        <div class="value-card bg-white rounded-2xl p-6 text-center shadow-sm">
+          <div class="w-16 h-16 bg-rotary-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-rotary-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-rotary-blue mb-2">国際協力と平和</h3>
+          <p class="text-sm text-gray-500">国際交流を通じて相互理解を深め、世界平和を推進する</p>
+        </div>
+        <div class="value-card bg-white rounded-2xl p-6 text-center shadow-sm">
+          <div class="w-16 h-16 bg-rotary-azure/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-rotary-azure" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-rotary-blue mb-2">教育と青少年リーダーシップ</h3>
+          <p class="text-sm text-gray-500">へき地教育と青少年リーダーシップの育成に取り組む</p>
+        </div>
+        <div class="value-card bg-white rounded-2xl p-6 text-center shadow-sm">
+          <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-rotary-blue mb-2">地域奉仕と社会貢献</h3>
+          <p class="text-sm text-gray-500">実際の行動で地域住民の生活の質を向上させる</p>
+        </div>
+      </div>
+
+      <!-- Four-Way Test -->
+      <div class="reveal">
+        <h3 class="text-center font-heading text-xl font-bold text-rotary-blue mb-6">四つのテスト</h3>
+        <div class="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+          <div class="test-card rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl font-heading font-bold text-rotary-gold">01</span>
+              <span class="text-gray-700">真実かどうか</span>
+            </div>
+          </div>
+          <div class="test-card rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl font-heading font-bold text-rotary-gold">02</span>
+              <span class="text-gray-700">みんなに公平か</span>
+            </div>
+          </div>
+          <div class="test-card rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl font-heading font-bold text-rotary-gold">03</span>
+              <span class="text-gray-700">好意と友情を深めるか</span>
+            </div>
+          </div>
+          <div class="test-card rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl font-heading font-bold text-rotary-gold">04</span>
+              <span class="text-gray-700">みんなのためになるかどうか</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE HIGHLIGHTS ============ -->
+  <section id="services" class="py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-rotary-blue mb-4">奉仕活動のハイライト</h2>
+        <div class="section-divider mb-6"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          へき地教育から国際協力まで、行動でロータリーの精神を実践しています
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+        <!-- Card 1 -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="../assets/images/2_AI教育.jpg" alt="地方教育支援" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-rotary-sky font-semibold mb-2">へき地STEM科技教育</div>
+            <h3 class="font-bold text-rotary-blue text-lg mb-2">メーカー教育とAIリソースの導入</h3>
+            <p class="text-sm text-gray-500">花蓮銅門小学校、宜蘭羅東高校、蘭嶼高校、澎湖馬公高校にSTEMメーカー教育とAI教育リソースを導入</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="../assets/images/3_廣島姊妹社交流.jpg" alt="国際協力" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-rotary-gold font-semibold mb-2">国際協力</div>
+            <h3 class="font-bold text-rotary-blue text-lg mb-2">広島姉妹クラブとの35年の絆</h3>
+            <p class="text-sm text-gray-500">広島南西ロータリークラブと1991年に姉妹締結。モンゴル、カンボジア、日本および台湾にまたがる国際公益プロジェクトで協力</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="../assets/images/4_銅門國小大合照.jpg" alt="教育支援" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-emerald-600 font-semibold mb-2">教育支援</div>
+            <h3 class="font-bold text-rotary-blue text-lg mb-2">へき地学校の図書・設備改善</h3>
+            <p class="text-sm text-gray-500">花蓮太巴塱部族図書支援、月眉小学校の食農教育とダンス教室、明禮小学校図書館システム、新北市瑞芳中学校の音楽教室設備改善を支援</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="../assets/images/5_扶青社路跑.jpg" alt="青少年奉仕" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-violet-600 font-semibold mb-2">青少年奉仕</div>
+            <h3 class="font-bold text-rotary-blue text-lg mb-2">青少年リーダーシップとキャリア教育</h3>
+            <p class="text-sm text-gray-500">青少年3on3バスケットボール大会、ローターアクト指導、青少年キャリア探索支援</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="../assets/images/6_扶輪服務.jpg" alt="社会貢献" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-rose-600 font-semibold mb-2">社会貢献</div>
+            <h3 class="font-bold text-rotary-blue text-lg mb-2">公益活動の先駆者</h3>
+            <p class="text-sm text-gray-500">ユナイテッド・ウェイ、児童福祉連盟などの社会福祉団体へのシード寄付および長期支援</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="../assets/images/社區環境美化.jpg" alt="地域環境美化" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-teal-600 font-semibold mb-2">地域環境美化</div>
+            <h3 class="font-bold text-rotary-blue text-lg mb-2">地域景観と環境プロジェクト</h3>
+            <p class="text-sm text-gray-500">陽明山公園桜園区、自由広場雲漢池桜寄贈、中正紀念堂ロハスガーデンおよび多肉植物園区の寄贈</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALENDAR ============ -->
+  <section id="calendar" class="py-20 md:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 reveal">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-rotary-blue mb-4">クラブカレンダー</h2>
+        <div class="section-divider mb-6"></div>
+        <p class="text-gray-600">例会・イベント・奉仕計画のスケジュールを一覧できます</p>
+      </div>
+
+      <div class="reveal">
+        <div class="calendar-container">
+          <iframe src="https://calendar.google.com/calendar/embed?src=5f232tpfqo3a7l13ur4d82mit8%40group.calendar.google.com&ctz=Asia%2FTaipei&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0" frameborder="0" scrolling="no" loading="lazy"></iframe>
+        </div>
+
+        <!-- Mobile: iCal subscribe link -->
+        <div class="mt-6 text-center">
+          <a href="https://calendar.google.com/calendar/ical/5f232tpfqo3a7l13ur4d82mit8%40group.calendar.google.com/public/basic.ics" class="inline-flex items-center gap-2 text-rotary-azure hover:text-rotary-blue text-sm font-semibold transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            カレンダーをスマホに登録
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOIN US ============ -->
+  <section id="join" class="py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-rotary-blue mb-4">入会案内</h2>
+        <div class="section-divider mb-6"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          ご専門分野を問わず、奉仕の精神に共感いただける方を歓迎いたします。ここには、地域のために何かしたいと心から願う仲間が集まっています。
+        </p>
+      </div>
+
+      <!-- Steps -->
+      <div class="grid md:grid-cols-3 gap-8 mb-12 reveal">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-rotary-azure rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-heading font-bold">1</div>
+          <h3 class="font-bold text-rotary-blue text-lg mb-2">会員のご紹介</h3>
+          <p class="text-sm text-gray-500">現会員からのご紹介で、クラブの文化を知る</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-rotary-sky rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-heading font-bold">2</div>
+          <h3 class="font-bold text-rotary-blue text-lg mb-2">例会を体験</h3>
+          <p class="text-sm text-gray-500">例会に参加し、ロータリーの親睦と学びの雰囲気を体感</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-rotary-gold rounded-full flex items-center justify-center mx-auto mb-4 text-rotary-blue text-2xl font-heading font-bold">3</div>
+          <h3 class="font-bold text-rotary-blue text-lg mb-2">正式入会</h3>
+          <p class="text-sm text-gray-500">審査を経て、ロータリーファミリーの一員に</p>
+        </div>
+      </div>
+
+      <!-- Who should join -->
+      <div class="bg-rotary-light/50 rounded-2xl p-8 md:p-10 max-w-3xl mx-auto reveal">
+        <h3 class="font-bold text-rotary-blue text-lg mb-4 text-center">どのような方に向いていますか？</h3>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div class="flex items-center gap-2 text-sm text-gray-700">
+            <svg class="w-5 h-5 text-rotary-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            各分野の専門家・ビジネスパーソン
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-700">
+            <svg class="w-5 h-5 text-rotary-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            国際的な視野を広げたい方
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-700">
+            <svg class="w-5 h-5 text-rotary-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            地域社会と社会貢献に関心のある方
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-700">
+            <svg class="w-5 h-5 text-rotary-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            人との交流と親睦を楽しみたい方
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-10 reveal">
+        <a href="#contact" class="btn-primary text-base">お問い合わせはこちら</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWS ============ -->
+  <section id="news" class="py-20 md:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 reveal">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-rotary-blue mb-4">最新ニュース</h2>
+        <div class="section-divider mb-6"></div>
+      </div>
+
+      <div id="news-container" class="grid md:grid-cols-3 gap-6 reveal">
+        <!-- News loaded dynamically from news.json -->
+        <!-- Static fallback -->
+        <div class="news-card bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="text-sm text-rotary-sky font-semibold mb-2">2025-2026</div>
+          <h3 class="text-lg font-bold text-rotary-blue mb-2">新年度スタート</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">第39期会長・張国栄（P John）のリーダーシップのもと、「善のために団結しよう」をテーマに新年度の奉仕活動を開始。</p>
+        </div>
+        <div class="news-card bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="text-sm text-rotary-sky font-semibold mb-2">継続中</div>
+          <h3 class="text-lg font-bold text-rotary-blue mb-2">へき地教育プロジェクト</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">花蓮のへき地学校と連携し、STEM教育と多様な教員派遣プログラムを推進しています。</p>
+        </div>
+        <div class="news-card bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="text-sm text-rotary-sky font-semibold mb-2">ご参加歓迎</div>
+          <h3 class="text-lg font-bold text-rotary-blue mb-2">毎週金曜日の例会</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">毎週金曜日の昼にハワードプラザホテル台北にて例会を開催。ご興味のある方はお気軽にご連絡ください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER / CONTACT ============ -->
+  <footer id="contact" class="bg-rotary-blue text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Club Info -->
+        <div>
+          <div class="mb-4">
+            <img src="../assets/images/logo-white-simple.png" alt="台北ニューイースト・ロータリークラブ" class="h-16 w-auto">
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed">
+            1987年の創立以来、奉仕を通じて専門家をつなぎ、地域と世界に変化を創り続けています。
+          </p>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="font-bold mb-4 text-rotary-gold">お問い合わせ</h3>
+          <div class="space-y-3 text-sm text-white/70">
+            <div class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <div>
+                <div>例会場：ハワードプラザホテル台北</div>
+                <div>台北市仁愛路三段160号</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              事務局: +886-2-25233039
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              例会場: +886-2-23267412
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              毎週金曜日 12:30 - 14:00
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              neweast.n3520@msa.hinet.net
+            </div>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h3 class="font-bold mb-4 text-rotary-gold">関連リンク</h3>
+          <div class="space-y-2 text-sm">
+            <a href="https://www.rotary.org" target="_blank" rel="noopener" class="footer-link block text-white/70">国際ロータリー Rotary International</a>
+            <a href="https://www.rid3522.org" target="_blank" rel="noopener" class="footer-link block text-white/70">国際ロータリー第3522地区</a>
+            <a href="https://calendar.google.com/calendar/embed?src=5f232tpfqo3a7l13ur4d82mit8%40group.calendar.google.com&ctz=Asia%2FTaipei" target="_blank" rel="noopener" class="footer-link block text-white/70">クラブカレンダー（完全版）</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p class="text-white/40 text-xs">&copy; 2026 台北ニューイースト・ロータリークラブ Rotary Club of Taipei New East</p>
+        <div class="flex items-center gap-1 text-xs">
+          <a href="../zh/" class="lang-btn px-2 py-1 rounded font-semibold text-white/40 hover:text-white">中</a>
+          <a href="../en/" class="lang-btn px-2 py-1 rounded font-semibold text-white/40 hover:text-white">EN</a>
+          <a href="../ja/" class="lang-btn px-2 py-1 rounded font-semibold bg-rotary-gold/20 text-rotary-gold">日</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

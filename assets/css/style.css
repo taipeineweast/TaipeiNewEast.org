@@ -1,0 +1,194 @@
+/* ======================================
+   台北新東扶輪社 — Custom Styles
+   Complements Tailwind CSS CDN
+   ====================================== */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero gradient overlay */
+.hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 51, 102, 0.85) 0%,
+    rgba(0, 80, 162, 0.7) 50%,
+    rgba(0, 151, 214, 0.6) 100%
+  );
+}
+
+/* Navigation */
+.nav-link {
+  position: relative;
+  padding-bottom: 2px;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #F7A81B;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Navbar scroll state */
+.navbar-scrolled {
+  background: rgba(0, 51, 102, 0.98) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card hover effects */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 51, 102, 0.12);
+}
+
+/* Value card */
+.value-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 51, 102, 0.1);
+}
+
+/* Stat counter */
+.stat-number {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+}
+
+/* Google Calendar responsive */
+.calendar-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.calendar-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .calendar-container {
+    padding-bottom: 100%;
+  }
+}
+
+/* Mobile menu animation */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.mobile-menu.open {
+  max-height: 400px;
+}
+
+/* Join steps */
+.step-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0097D6, #F7A81B);
+  z-index: 0;
+}
+
+/* News card */
+.news-card {
+  transition: transform 0.3s ease;
+}
+.news-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Footer links */
+.footer-link {
+  transition: color 0.2s ease;
+}
+.footer-link:hover {
+  color: #F7A81B;
+}
+
+/* Language switcher */
+.lang-btn {
+  transition: all 0.2s ease;
+}
+.lang-btn:hover, .lang-btn.active {
+  background: #F7A81B;
+  color: #003366;
+}
+
+/* Four-Way Test card */
+.test-card {
+  background: linear-gradient(135deg, #f8faff 0%, #e8f4fd 100%);
+  border-left: 4px solid #F7A81B;
+}
+
+/* CTA button */
+.btn-primary {
+  background: #F7A81B;
+  color: #003366;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.btn-primary:hover {
+  background: #e6960f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(247, 168, 27, 0.3);
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.btn-outline:hover {
+  background: #fff;
+  color: #003366;
+}
+
+/* Section divider */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #F7A81B, #0097D6);
+  margin: 0 auto;
+  border-radius: 2px;
+}

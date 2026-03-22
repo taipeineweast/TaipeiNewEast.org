@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台北市新東扶輪社 | Rotary Club of Taipei New East</title>
+  <meta name="description" content="台北市新東扶輪社，自1987年創社以來，以服務串連專業，為社區與世界創造改變。加入我們，一起團結行善。">
+  <meta property="og:title" content="台北市新東扶輪社">
+  <meta property="og:description" content="以服務串連專業，為社區與世界創造改變">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://taipeineweast.org/zh/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'rotary-blue': '#003366',
+            'rotary-azure': '#0050A2',
+            'rotary-sky': '#0097D6',
+            'rotary-royal': '#1A237E',
+            'rotary-gold': '#F7A81B',
+            'rotary-light': '#E8F4FD',
+          },
+          fontFamily: {
+            'heading': ['"Open Sans Condensed"', '"Noto Sans TC"', 'sans-serif'],
+            'body': ['"Open Sans"', '"Noto Sans TC"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="font-body text-gray-800 bg-white">
+
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-rotary-blue/95 backdrop-blur-sm transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-2 text-white">
+          <img src="../assets/images/logo-white-simple.png" alt="台北市新東扶輪社" class="h-12 md:h-14 w-auto">
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#about" class="nav-link text-white/90 hover:text-white text-sm">關於我們</a>
+          <a href="#services" class="nav-link text-white/90 hover:text-white text-sm">服務成果</a>
+          <a href="#calendar" class="nav-link text-white/90 hover:text-white text-sm">行事曆</a>
+          <a href="#join" class="nav-link text-white/90 hover:text-white text-sm">加入我們</a>
+          <a href="#contact" class="nav-link text-white/90 hover:text-white text-sm">聯絡</a>
+          <!-- Language switcher -->
+          <div class="flex items-center gap-1 ml-2">
+            <a href="../zh/" class="lang-btn px-2 py-1 rounded text-xs font-semibold bg-rotary-gold text-rotary-blue">中</a>
+            <a href="../en/" class="lang-btn px-2 py-1 rounded text-xs font-semibold text-white/70 hover:bg-rotary-gold hover:text-rotary-blue">EN</a>
+            <a href="../ja/" class="lang-btn px-2 py-1 rounded text-xs font-semibold text-white/70 hover:bg-rotary-gold hover:text-rotary-blue">日</a>
+          </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="menu-btn" class="md:hidden text-white p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="mobile-menu md:hidden">
+        <div class="pb-4 space-y-2">
+          <a href="#about" class="block text-white/90 hover:text-white py-2 text-sm">關於我們</a>
+          <a href="#services" class="block text-white/90 hover:text-white py-2 text-sm">服務成果</a>
+          <a href="#calendar" class="block text-white/90 hover:text-white py-2 text-sm">行事曆</a>
+          <a href="#join" class="block text-white/90 hover:text-white py-2 text-sm">加入我們</a>
+          <a href="#contact" class="block text-white/90 hover:text-white py-2 text-sm">聯絡</a>
+          <div class="flex items-center gap-2 pt-2 border-t border-white/20">
+            <a href="../zh/" class="lang-btn px-3 py-1 rounded text-xs font-semibold bg-rotary-gold text-rotary-blue">中文</a>
+            <a href="../en/" class="lang-btn px-3 py-1 rounded text-xs font-semibold text-white/70 border border-white/30">English</a>
+            <a href="../ja/" class="lang-btn px-3 py-1 rounded text-xs font-semibold text-white/70 border border-white/30">日本語</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background photo -->
+    <div class="absolute inset-0">
+      <img src="../assets/images/1_Hero.jpg" alt="台北新東扶輪社活動" class="w-full h-full object-cover">
+    </div>
+    <!-- Dark overlay for text readability -->
+    <div class="absolute inset-0 hero-overlay"></div>
+
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <!-- Rotary Logo -->
+      <div class="mb-6">
+        <img src="../assets/images/logo-white-simple.png" alt="台北市新東扶輪社" class="h-28 md:h-36 w-auto mx-auto">
+      </div>
+
+      <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+        以服務串連專業<br>
+        <span class="text-rotary-gold">為社區與世界創造改變</span>
+      </h1>
+      <p class="text-white/80 text-lg sm:text-xl mb-4 max-w-2xl mx-auto">
+        台北新東扶輪社 — 自 1987 年以來的行動與聯誼
+      </p>
+      <p class="text-rotary-gold/90 text-sm sm:text-base mb-8">
+        2025-2026 年度主題：團結行善 Unite for Good
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#about" class="btn-primary text-base">認識我們</a>
+        <a href="#join" class="btn-outline text-base">加入扶輪</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-rotary-blue mb-4">關於新東扶輪社</h2>
+        <div class="section-divider mb-6"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
+          台北新東扶輪社創立於 1987 年，隸屬國際扶輪 3522 地區。社友來自不同職業領域，透過例會交誼、社區服務、國際服務、職業服務、青少年服務，持續在教育、社會公益與跨國交流上投入行動。
+        </p>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 reveal">
+        <div class="text-center p-6 rounded-2xl bg-rotary-light/50">
+          <div class="stat-number text-4xl md:text-5xl text-rotary-azure mb-1">1987</div>
+          <div class="text-sm text-gray-500">創社年份</div>
+        </div>
+        <div class="text-center p-6 rounded-2xl bg-rotary-light/50">
+          <div class="stat-number text-4xl md:text-5xl text-rotary-azure mb-1">39</div>
+          <div class="text-sm text-gray-500">屆</div>
+        </div>
+        <div class="text-center p-6 rounded-2xl bg-rotary-light/50">
+          <div class="stat-number text-4xl md:text-5xl text-rotary-azure mb-1">3522</div>
+          <div class="text-sm text-gray-500">國際扶輪地區</div>
+        </div>
+        <div class="text-center p-6 rounded-2xl bg-rotary-light/50">
+          <div class="stat-number text-4xl md:text-5xl text-rotary-azure mb-1">35+</div>
+          <div class="text-sm text-gray-500">年國際合作</div>
+        </div>
+      </div>
+
+      <!-- President & Meeting Info -->
+      <div class="grid md:grid-cols-2 gap-8 reveal">
+        <!-- Current President -->
+        <div class="bg-gradient-to-br from-rotary-blue to-rotary-azure rounded-2xl p-8 text-white">
+          <div class="text-rotary-gold text-sm font-semibold mb-2">2025-2026 年度社長</div>
+          <h3 class="text-2xl font-bold mb-1">張國榮 P John (Kuo-Rong) Chang</h3>
+          <p class="text-white/70 text-sm mb-4">第 39 屆社長</p>
+          <div class="flex items-center gap-3 text-sm text-white/80">
+            <span>年度主題</span>
+            <span class="bg-rotary-gold/20 text-rotary-gold px-3 py-1 rounded-full text-xs font-semibold">
+              團結行善 Unite for Good
+            </span>
+          </div>
+          <div class="mt-4 pt-4 border-t border-white/20 text-sm text-white/60">
+            <p>國際扶輪社長：Francesco Arezzo</p>
+            <p>3522 地區總監：林政邦 DG Capital</p>
+          </div>
+        </div>
+
+        <!-- Meeting Info -->
+        <div class="bg-gray-50 rounded-2xl p-8">
+          <h3 class="text-xl font-bold text-rotary-blue mb-4">例會資訊</h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-rotary-sky/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-rotary-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800">每週五</div>
+                <div class="text-sm text-gray-500">12:30 PM - 2:00 PM</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-rotary-sky/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-rotary-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800">福華大飯店</div>
+                <div class="text-sm text-gray-500">台北市仁愛路三段 160 號</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-rotary-sky/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-rotary-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800">(02) 2523-3039</div>
+                <div class="text-sm text-gray-500">新東扶輪社辦公室</div>
+                <div class="font-semibold text-gray-800 mt-1">(02) 2326-7412</div>
+                <div class="text-sm text-gray-500">例會場地 福華大飯店</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-rotary-sky/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-rotary-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800">neweast.n3520@msa.hinet.net</div>
+                <div class="text-sm text-gray-500">E-mail</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT IS ROTARY ============ -->
+  <section id="rotary" class="py-20 md:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-rotary-blue mb-4">什麼是扶輪？</h2>
+        <div class="section-divider mb-6"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          扶輪創立於1905年，是全球性的服務組織，匯聚各行各業的專業人士與領導者，以「服務」為核心理念，透過聯誼與合作，改善社區並促進世界和平。扶輪社員在全球各地推動各項服務計畫，關注如健康、教育、環境與經濟發展等議題，同時建立真誠友誼，並在職業與生活中實踐高道德標準，用行動改善社區與世界。
+        </p>
+      </div>
+
+      <!-- Value Cards -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 reveal">
+        <div class="value-card bg-white rounded-2xl p-6 text-center shadow-sm">
+          <div class="w-16 h-16 bg-rotary-sky/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-rotary-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-rotary-blue mb-2">聯誼與專業交流</h3>
+          <p class="text-sm text-gray-500">結識各領域專業人士，拓展視野與人脈</p>
+        </div>
+        <div class="value-card bg-white rounded-2xl p-6 text-center shadow-sm">
+          <div class="w-16 h-16 bg-rotary-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-rotary-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-rotary-blue mb-2">國際合作與和平</h3>
+          <p class="text-sm text-gray-500">跨國交流增進理解，促進世界和平</p>
+        </div>
+        <div class="value-card bg-white rounded-2xl p-6 text-center shadow-sm">
+          <div class="w-16 h-16 bg-rotary-azure/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-rotary-azure" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-rotary-blue mb-2">教育與青年領導力</h3>
+          <p class="text-sm text-gray-500">投入偏鄉教育與培養青年領導力</p>
+        </div>
+        <div class="value-card bg-white rounded-2xl p-6 text-center shadow-sm">
+          <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-rotary-blue mb-2">社區服務與公益</h3>
+          <p class="text-sm text-gray-500">以實際行動改善社區居民生活品質</p>
+        </div>
+      </div>
+
+      <!-- Four-Way Test -->
+      <div class="reveal">
+        <h3 class="text-center font-heading text-xl font-bold text-rotary-blue mb-6">扶輪四大考驗</h3>
+        <div class="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+          <div class="test-card rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl font-heading font-bold text-rotary-gold">01</span>
+              <span class="text-gray-700">是否一切屬於真實？</span>
+            </div>
+          </div>
+          <div class="test-card rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl font-heading font-bold text-rotary-gold">02</span>
+              <span class="text-gray-700">是否各方得到公平？</span>
+            </div>
+          </div>
+          <div class="test-card rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl font-heading font-bold text-rotary-gold">03</span>
+              <span class="text-gray-700">能否促進親善友誼？</span>
+            </div>
+          </div>
+          <div class="test-card rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl font-heading font-bold text-rotary-gold">04</span>
+              <span class="text-gray-700">能否兼顧彼此利益？</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE HIGHLIGHTS ============ -->
+  <section id="services" class="py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-rotary-blue mb-4">服務成果亮點</h2>
+        <div class="section-divider mb-6"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          從偏鄉教育到國際合作，我們用行動實踐扶輪精神
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+        <!-- Card 1 -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="../assets/images/2_AI教育.jpg" alt="偏鄉教育 - AI教育" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-rotary-sky font-semibold mb-2">偏鄉STEM科技教育</div>
+            <h3 class="font-bold text-rotary-blue text-lg mb-2">引進創客教育與AI資源</h3>
+            <p class="text-sm text-gray-500">為花蓮銅門國小、宜蘭羅東高中、蘭嶼高中、澎湖馬公高中引進STEM創客教育與AI教育資源</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="../assets/images/3_廣島姊妹社交流.jpg" alt="國際合作 - 廣島姊妹社交流" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-rotary-gold font-semibold mb-2">國際合作</div>
+            <h3 class="font-bold text-rotary-blue text-lg mb-2">廣島姊妹社35年情誼</h3>
+            <p class="text-sm text-gray-500">與日本廣島西南扶輪社自 1991 年締約，合作跨國公益計畫遍及蒙古、柬埔寨、日本及台灣</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="../assets/images/4_銅門國小大合照.jpg" alt="教育支持 - 銅門國小" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-emerald-600 font-semibold mb-2">教育支持</div>
+            <h3 class="font-bold text-rotary-blue text-lg mb-2">偏鄉學校圖書與設備改善</h3>
+            <p class="text-sm text-gray-500">支持花蓮太巴塱部落圖書、月眉國小食農教育與舞蹈教室、明禮國小圖書館系統、新北市瑞芳國中音樂教室設備改善</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="../assets/images/5_扶青社路跑.jpg" alt="青年服務 - 扶青社路跑" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-violet-600 font-semibold mb-2">青年服務</div>
+            <h3 class="font-bold text-rotary-blue text-lg mb-2">青年領導力與職涯教育</h3>
+            <p class="text-sm text-gray-500">青少年三對三籃球賽、扶青社輔導、協助青年職涯探索</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="../assets/images/6_扶輪服務.jpg" alt="社會公益 - 扶輪服務" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-rose-600 font-semibold mb-2">社會公益</div>
+            <h3 class="font-bold text-rotary-blue text-lg mb-2">早期公益先驅</h3>
+            <p class="text-sm text-gray-500">聯合勸募、兒福聯盟等社福機構的種子捐款及長期支持</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="../assets/images/社區環境美化.jpg" alt="社區環境美化" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-teal-600 font-semibold mb-2">社區環境美化</div>
+            <h3 class="font-bold text-rotary-blue text-lg mb-2">社區景觀與環境計畫</h3>
+            <p class="text-sm text-gray-500">陽明山公園櫻花園區、自由廣場雲漢池櫻花捐贈、中正紀念堂樂活花園及多肉植物園區捐贈</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALENDAR ============ -->
+  <section id="calendar" class="py-20 md:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 reveal">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-rotary-blue mb-4">社團行事曆</h2>
+        <div class="section-divider mb-6"></div>
+        <p class="text-gray-600">例會、活動與服務計畫時程一目了然</p>
+      </div>
+
+      <div class="reveal">
+        <div class="calendar-container">
+          <iframe src="https://calendar.google.com/calendar/embed?src=5f232tpfqo3a7l13ur4d82mit8%40group.calendar.google.com&ctz=Asia%2FTaipei&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0" frameborder="0" scrolling="no" loading="lazy"></iframe>
+        </div>
+
+        <!-- Mobile: iCal subscribe link -->
+        <div class="mt-6 text-center">
+          <a href="https://calendar.google.com/calendar/ical/5f232tpfqo3a7l13ur4d82mit8%40group.calendar.google.com/public/basic.ics" class="inline-flex items-center gap-2 text-rotary-azure hover:text-rotary-blue text-sm font-semibold transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            訂閱行事曆到手機
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOIN US ============ -->
+  <section id="join" class="py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-rotary-blue mb-4">加入我們</h2>
+        <div class="section-divider mb-6"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          無論你的專業背景為何，只要認同服務精神，歡迎成為我們的一份子。在這裡，你會遇到一群真心想為社區做點事的人。
+        </p>
+      </div>
+
+      <!-- Steps -->
+      <div class="grid md:grid-cols-3 gap-8 mb-12 reveal">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-rotary-azure rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-heading font-bold">1</div>
+          <h3 class="font-bold text-rotary-blue text-lg mb-2">社友推薦</h3>
+          <p class="text-sm text-gray-500">由現任社友引薦，認識社團文化</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-rotary-sky rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-heading font-bold">2</div>
+          <h3 class="font-bold text-rotary-blue text-lg mb-2">參加例會體驗</h3>
+          <p class="text-sm text-gray-500">出席例會，感受扶輪的聯誼與學習氛圍</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-rotary-gold rounded-full flex items-center justify-center mx-auto mb-4 text-rotary-blue text-2xl font-heading font-bold">3</div>
+          <h3 class="font-bold text-rotary-blue text-lg mb-2">正式入社</h3>
+          <p class="text-sm text-gray-500">通過審核，成為扶輪大家庭的一員</p>
+        </div>
+      </div>
+
+      <!-- Who should join -->
+      <div class="bg-rotary-light/50 rounded-2xl p-8 md:p-10 max-w-3xl mx-auto reveal">
+        <h3 class="font-bold text-rotary-blue text-lg mb-4 text-center">什麼樣的人適合加入？</h3>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div class="flex items-center gap-2 text-sm text-gray-700">
+            <svg class="w-5 h-5 text-rotary-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            各行各業的專業人士
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-700">
+            <svg class="w-5 h-5 text-rotary-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            想拓展國際視野的人
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-700">
+            <svg class="w-5 h-5 text-rotary-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            關心社區與公益的人
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-700">
+            <svg class="w-5 h-5 text-rotary-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            喜歡交朋友、享受聯誼的人
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-10 reveal">
+        <a href="#contact" class="btn-primary text-base">聯絡我們了解更多</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWS ============ -->
+  <section id="news" class="py-20 md:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 reveal">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-rotary-blue mb-4">最新消息</h2>
+        <div class="section-divider mb-6"></div>
+      </div>
+
+      <div id="news-container" class="grid md:grid-cols-3 gap-6 reveal">
+        <!-- News loaded dynamically from news.json -->
+        <!-- Static fallback -->
+        <div class="news-card bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="text-sm text-rotary-sky font-semibold mb-2">2025-07</div>
+          <h3 class="text-lg font-bold text-rotary-blue mb-2">新年度啟航</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">第 39 屆社長張國榮 P John 帶領社友，以「團結行善」為主題展開新年度服務。</p>
+        </div>
+        <div class="news-card bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="text-sm text-rotary-sky font-semibold mb-2">持續進行</div>
+          <h3 class="text-lg font-bold text-rotary-blue mb-2">縮短數位落差</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">持續與神通資科及育秀基金會合作，為偏鄉學校引進AI教育資源</p>
+        </div>
+        <div class="news-card bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="text-sm text-rotary-sky font-semibold mb-2">每週五</div>
+          <h3 class="text-lg font-bold text-rotary-blue mb-2">每週五例會</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">每週五中午於福華大飯店舉行例會，歡迎有興趣的朋友聯繫我們出席例會。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER / CONTACT ============ -->
+  <footer id="contact" class="bg-rotary-blue text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Club Info -->
+        <div>
+          <div class="mb-4">
+            <img src="../assets/images/logo-white-simple.png" alt="台北市新東扶輪社" class="h-16 w-auto">
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed">
+            自 1987 年創社以來，以服務串連專業，為社區與世界創造改變。
+          </p>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="font-bold mb-4 text-rotary-gold">聯絡資訊</h3>
+          <div class="space-y-3 text-sm text-white/70">
+            <div class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <div>
+                <div>例會：福華大飯店</div>
+                <div>台北市仁愛路三段 160 號</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              辦公室 (02) 2523-3039
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              例會場地 (02) 2326-7412
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              每週五 12:30 - 14:00
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              neweast.n3520@msa.hinet.net
+            </div>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h3 class="font-bold mb-4 text-rotary-gold">相關連結</h3>
+          <div class="space-y-2 text-sm">
+            <a href="https://www.rotary.org" target="_blank" rel="noopener" class="footer-link block text-white/70">國際扶輪 Rotary International</a>
+            <a href="https://www.rid3522.org" target="_blank" rel="noopener" class="footer-link block text-white/70">國際扶輪 3522 地區</a>
+            <a href="https://calendar.google.com/calendar/embed?src=5f232tpfqo3a7l13ur4d82mit8%40group.calendar.google.com&ctz=Asia%2FTaipei" target="_blank" rel="noopener" class="footer-link block text-white/70">社團行事曆（完整版）</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p class="text-white/40 text-xs">&copy; 2026 台北市新東扶輪社 Rotary Club of Taipei New East</p>
+        <div class="flex items-center gap-1 text-xs">
+          <a href="../zh/" class="lang-btn px-2 py-1 rounded font-semibold bg-rotary-gold/20 text-rotary-gold">中</a>
+          <a href="../en/" class="lang-btn px-2 py-1 rounded font-semibold text-white/40 hover:text-white">EN</a>
+          <a href="../ja/" class="lang-btn px-2 py-1 rounded font-semibold text-white/40 hover:text-white">日</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
